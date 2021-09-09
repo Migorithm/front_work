@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		//div영역을 클릭하면 함수 호출되도록 선택자와 함수를 연결
+		$("div").click(function(){
+			//p태그 부분에 <h2>Encore PlayData</h2> 을 append
+			$(this>p).append("<h2>Encore PlayData</h2>")
+		});
+
+		});
+</script>
+
+
+<body>
+	<div>
+		<h1>$(selector).on()</h1>
+		<p>on 함수 사용하기 :: 클릭함수와 동일하지만 미래에 존재할 요소에 적용가능함</p>
+	</div>
+</body>
+</html>

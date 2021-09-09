@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#jsonBtn").click(function(){
+			$.ajax({
+				type:"post",
+				url:"JsonServlet",
+				dataType:"json", //returned dataType on response
+				success:function(data){
+					$("#resultView").html("<h2>"+data.weather.getRegion()+"의 현재온도는 "+data.weather.getTemp()+"도 입니다." +"</h2>")
+				}
+			})
+		})
+
+		});
+</script>
+
+
+<body>
+	<h2>JSON TEST...</h2>
+	<input type="button" value="json-object" id="jsonBtn">
+	<span id="resultView"></span>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax01</title>
+<script type="text/javascript">
+	var xhr; /* XMLHttpRequest */
+			 //서버로 요청하는 로직을 이 안에 담아낸다.
+	function startRequest(){
+		//1. 요청을 보낼 비동기 객체를 생성. 
+		xhr = new XMLHttpRequest();
+		//alert(xhr); 객체생성 확인용.
+		
+		
+		//2. 응답받을 함수를 지정해놓는다.
+		xhr.onreadystatechange = callback; //응답받을 함수 이름
+		
+		//3. 서버의 어떤 페이지로 요청을 보내는지 지정한다. (get,post)
+		xhr.open("get","CountServlet?id=encore&pass=playdata") //같은 도메인으로 보낼때. ex) 127.0.0.1:8787/CounterServlet
+		
+		//4. 실제 서버로 요청이 들어감...
+		xhr.send(null) //get방식일때는 null로. 왜냐면 주소창에 다 담기때문에 딱히 보낼 데이터가 없기 때문. 
+		
+	}
+	
+	//서버가 응답하면 그 내용을 받아서 리턴되는 데이터를 적절한 곳에 (span) 뿌린다.
+	function callback(){
+		if(xhr.readyState==4){ //현재 xhr의 상태를 의미. readyState는 진행단계에 따라 0~4의 값을 갖는다. 
+			if(xhr.status==200){
+				var text = xhr.responseText; //out.print()로 보낸 내용을 받는다.
+				document.getElementById("resultView").innerHTML= text;
+			}
+		}
+		
+	}
+
+</script>
+
+</head>
+<body>
+<h2>Show Count Update</h2>
+<input type="button" value="COUNT 증가시키기" onclick="startRequest()">
+
+<p></p>
+<span id="resultView"></span>
+
+</body>
+</html>

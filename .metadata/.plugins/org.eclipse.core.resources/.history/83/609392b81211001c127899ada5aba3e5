@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+<body>
+<div id="first">
+	<div>
+		<h3 v-text="title"></h3>
+	</div>
+</div>
+
+<div id="second">
+	<div onclick="hello('James')">일반 자바스크립트 ... ::클릭 이벤트..</div>
+</div>
+
+
+
+<input type="third" onclick="hello2(this)"> <!-- form객체의 this -->
+
+</body>
+<script>
+	var model = {title:"Encore"}
+	var app = new Vue({
+		el:"#first",
+		data:model
+	});
+	
+	function hello(name){
+		//vue객체 외부 존재하는 hello function. 여기서 Vue속성에 접근하려면..?
+		//vue객체 외부에서 vue속성에 접근하려면 vue인스턴스명
+		app.$data.title = name;  //app.title 의 원본.
+	}
+	
+	function hello2(a){
+		alert(a);
+	}
+
+</script>
+</html>

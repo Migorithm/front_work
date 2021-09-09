@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		
+
+		});
+</script>
+
+
+<body>
+<input type="button" value="SELECT 옵션생성" id="addOptionBtn"><!-- 버튼 누르면 옵션 생성되도록  -->
+<input type="button" value="SELECT 옵션삭제" id="deleteOptionBtn">
+</body>
+</html>

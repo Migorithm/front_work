@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+
+
+
+<body>
+<!-- 1.화면구성 -V -->  
+<div id="app">
+	<h2></h2>
+</div>
+
+
+
+<!-- 스크립트 위에다 쓰려면 window.onload or Jquery.. -->
+<script>
+//2. 데이터 모델   - M
+var model = {message:"Vue.js Start!!"}
+
+
+//3. 뷰모델 VueModel, 객체 생성     - VM
+new Vue({
+	
+	
+});
+
+</script>
+</body>
+</html>

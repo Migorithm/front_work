@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function checkAge(){
+	/* 
+	입력된 나이가 19세 이상이면 "성인입니다... 사이트 입장 가능하십니다^^" 메세지를 alert로
+	*/
+	
+	var age = document.getElementsByName("age")
+	if(age[0].value ==""){
+		alert("값을 입력해 주세요.")}
+	else if(isNaN(Number(age[0].value))){
+		alert("숫자값을 입력해 주세요.")}
+	else if (age[0].value >=19){
+		alert("성인입니다... 사이트 입장 가능하십니다^^")
+	}
+	else{alert("애들은 가라.");};
+	
+	
+	age[0].value="";
+	age.focus();
+	
+	
+}
+
+
+</script>
+</head>
+<body>
+<form name="ageFrm">
+	AGE <input type="text" name="age">
+	<!-- 이벤트 발생 근원지는 버튼... 이걸 Source라 한다.
+		발생하는 이벤트는 클릭이벤트이다.
+		
+		마우스이벤트, 아이템이벤트, 키이벤트, 클릭이벤트... 이것들이 이벤트 클래스들이다.
+	-->
+	<input type="button" value="CheckAge" onclick="checkAge()">
+		
+
+</form>
+
+</body>
+</html>

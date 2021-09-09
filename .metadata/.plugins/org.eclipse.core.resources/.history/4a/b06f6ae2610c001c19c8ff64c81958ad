@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.oddnum{background:"greenyellow";
+			color :'blue'}
+</style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		//filter함수는 동일한 태그들이 있을 때 여러개의 태그 중에서 특정 조건에 부합하는 태그들을 걸래낼 때 사용한다.
+		
+		//1.
+		//css({})   css().css()
+		$('h1').filter(function(index){
+			return index % 3 ==0 || index % 5 ==0
+		}).addClass("oddnum");
+		
+		});
+</script>
+
+
+<body>
+	<h1>Item - 0</h1>
+	<h1>Item - 1</h1>
+	<h1>Item - 2</h1>
+	<h1>Item - 3</h1>
+	<h1>Item - 4</h1>
+	<h1>Item - 5</h1>
+	<h1>Item - 6</h1>
+</body>
+</html>

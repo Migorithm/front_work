@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$(function(){
+	
+	var para = new URLSearchParams(window.location.search);
+	var pass = para.get("KEY");
+	for (var i=0;i<pass.length;i++){
+		("<h2>"+pass[i]+"</h2>").appendTo(Body)
+	}
+	
+	
+})
+
+
+
+</script>
+</head>
+<body>
+<strong>폼에 입력된 정보를 출력합니다...</strong>
+
+
+</body>
+
+</body>
+</html>

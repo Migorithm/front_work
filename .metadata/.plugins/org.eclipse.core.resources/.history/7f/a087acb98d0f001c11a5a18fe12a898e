@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info><!-- root tag -->
+	<list>
+		<region>서울</region>
+		<wind>37</wind>
+		<temp>25</temp>
+		<rain>66</rain>
+	</list>
+	<list>
+		<region>부산</region>
+		<wind>17</wind>
+		<temp>15</temp>
+		<rain>86</rain>
+	</list>
+	<list>
+		<region>전주</region>
+		<wind>77</wind>
+		<temp>05</temp>
+		<rain>16</rain>
+	</list>
+</info>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{
+		border: 3px solid magenta;
+		width: 550px;
+	}
+	tr,th,td{text-align:center;border: 1px dotted blue;font-size:1.2em}
+	
+	.hover{background-color:#00f; color:#fff;}
+</style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+
+		});
+</script>
+
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>번호</th><th>이름</th><th>주소</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>111</td><td>아이유1</td><td>서초동</td><br>
+				<td>121</td><td>아이유2</td><td>방배동</td><br>
+				<td>161</td><td>아이유3</td><td>창신동</td><br>
+				<td>118</td><td>아이유4</td><td>녹원동</td>			
+			</tr>
+		</tbody>
+		
+	</table>
+
+</body>
+</html>

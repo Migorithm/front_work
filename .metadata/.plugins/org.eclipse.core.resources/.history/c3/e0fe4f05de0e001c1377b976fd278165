@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#createBtn").on('click',function(){
+			//동적으로 계속 글자 뿌려주기. 
+			/* $("#resultView").append($(this).val()+"<p></p>"); */
+			
+			//html이용해서 뿌려주기. 
+			var html_text =  $("#resultView").html()
+			$("#resultView").html(html_text+$(this).val()+"<p></p>")
+			
+		});//click
+		
+		//2. select 폼에서 내가 선택한 지점이 resultView영역에 동적으로 뿌려지도록
+		$('createSel').on('change',function(){
+			var text = $(this).selected()
+			alert(text);
+			
+		})	
+		
+		
+
+		});
+</script>
+
+
+<body>
+	<input type="button" value="버튼 클릭시 동적으로 문자열 생성하기" id="createBtn">
+	<select id="createSel">
+		<option>Encore Academy 교대지점</option>
+		<option>Encore Academy 서초지점</option>
+		<option>Encore Academy 영등포지점</option>
+		<option>Encore Academy 판교지점</option>
+		<option>Encore Academy 삼성지점</option>
+	</select>
+	<div id="resultView"></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+
+<body>
+<div id="app">
+	<h3><b>다음 중식 음식 메뉴입니다.<br/>좋아하시는 메뉴들을 있는대로 고르세요.</b></h3>
+	<input type="checkbox" name="menu" value="짜장면">짜장면
+	<input type="checkbox" name="menu" value="탕수육">탕수육
+	<input type="checkbox" name="menu" value="팔보채">팔보채
+	<input type="checkbox" name="menu" value="짬뽕">짬뽕
+	<input type="checkbox" name="menu" value="난자완스">난자완스
+	<input type="checkbox" name="menu" value="울면">울면
+	<hr>
+	<h4>==========선택한 메뉴들입니다.============</h4>
+	<table id="list">
+		<thead>
+			<tr>
+				<th>번호</th><th>메뉴 이름</th><th>상점 이름</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td><td></td><td>ENCORE</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+<script>
+
+	
+</script>
+
+</html>

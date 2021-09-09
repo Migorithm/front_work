@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/* 선언부 필요 x */
+
+
+
+	h2{
+		color: #877878;
+		font-family:궁서체;
+		font-style:italic;
+		font-size:25pt;
+	}
+
+	.phara{
+		color: gray;
+		font-size:14pt;
+		font-family:cursive;
+		}
+
+	#ptag2 {
+		font-size: 14pt;
+		color: gray;
+		background-color: #cee0d8;
+		font-family:cursive;
+	}

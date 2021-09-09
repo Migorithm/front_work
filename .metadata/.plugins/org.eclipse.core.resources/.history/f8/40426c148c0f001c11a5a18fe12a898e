@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#ajaxBtn").click(function(){
+			var id= $("#id").val(); //id that will be put in json.
+			
+			$.ajax({
+				//request
+				type:"post",
+				url:"JqueryAjax" ,
+				data:{"id":id} ,  //json type!
+				
+				//reponse
+				success:function(result){//반드시 서버가 보내는 값을 받는 변수가있어야.
+					$("#resultView").append("<p>"+result+"</p>").css("color","red")
+					
+				},
+				
+				error:function(xhr,status,message){
+					alert("Error:: "+message);
+				},
+				timeout:1000
+
+			})
+	
+		})
+
+		});
+</script>
+
+
+<body>
+ID : <input type="text" name="id" id="id"> 
+<input type="button" value="JQueryAjax" id="ajaxBtn">
+<div id="resultView"></div>
+</body>
+</html>

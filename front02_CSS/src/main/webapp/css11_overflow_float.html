@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	#wrap{
+		border: 1px solid black;
+		padding:10px;
+		overflow:hidden;
+		
+	}
+	
+	#a {
+		border:1px solid red;
+		margin-right:20px;
+		float:left;
+		padding:10px;
+		/* div태그의 자식요소로서 wrapper에 감싸져 있으면 float사용 시 부모요소의 범위를
+		벗어나게 된다. 
+			1. 부모 요소의 범위를 크게 잡아버린다.
+			2. 이럴 때 해결책은 overflow --> 자식이 아닌 부모에게!
+		*/
+		
+		
+	}
+	#b {
+		border:1px solid green;
+		margin:0;
+		float:left;
+		
+	}
+	
+</style>
+
+</head>
+<body>
+<div id="wrap">
+	<div id="a">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+	</div>
+ </div>
+<div id="b">
+	Play
+</div>
+
+</body>
+</html>

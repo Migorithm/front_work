@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 속성을 선택자로 지정하는 방법 -->
+<style type="text/css">
+	/* 태그 + 키 + 밸류 */
+	input[required="required"]{
+		background: #d4c7c7;
+	}
+	
+	/* 태그 + 밸류  */
+	input:disabled{ background: #ede4e4;}
+	
+</style>
+
+</head>
+<body>
+<!-- 
+상태에 대한 attribute
+:: 활성화 
+:: 비활성화
+:: read-only
+
+ -->
+<h2>State Attribute</h2>
+<form action="#">
+	<h3>Enabled</h3>
+	<input />
+	
+	<h3>disabled</h3>
+	<input disabled="disabled"/>
+
+	<h3>Read_only</h3>
+	<input readonly="readonly" value="encore"/>
+
+	<h3>required</h3>
+	<input required="required" placeholder="input password"/>
+	
+	<input type="submit" value="SEND">
+
+</form>
+</body>
+</html>

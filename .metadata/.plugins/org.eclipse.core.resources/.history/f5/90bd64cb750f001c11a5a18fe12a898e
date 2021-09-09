@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#eachBtn").on("click",function(){
+			//배열 선언과 생성	
+			var arr = [];
+			arr.push("아이유");
+			arr.push("이무진");
+			arr.push("박나래");
+			arr.push("기안84");
+			alert(arr.toString()) //배열을 스트링화시켜서 출력할 수 있도록. 
+			
+			var str ="";
+			for (var i=0; i<arr.length; i++){
+				str += arr[i]+" ";
+			}
+			alert(str)
+		});
+	});
+</script>
+
+
+<body>
+	<input type="button" value="배열에 each() 적용하기" id="eachBtn">
+
+</body>
+</html>

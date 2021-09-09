@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+	some을 선언하지 않고 바로 사용함으로써 에러가 발생해야 하지만 에러가 발생하지 않는다.
+	사실상 함수 최상단으로 var some 이 부분이 끌어올려지는 호이스팅이 작동된다. 
+	중요한 것은 변수 자체는 선언되지만, 값은 hoisting 대상이 아니기 때문에 
+	undefined으로 처리된다. 
+	*/
+
+	function info(){
+		alert("정의되지 않은 변수 ..." +some); //에러나지 않고 출력.. HOISTING 원리
+		var some = "Hello Function~~!!"
+	}
+info();
+	
+
+var info2 = function(){
+	alert("정의되지 않은 변수2 ..." +some); //에러나지 않고 출력.. HOISTING 원리! 
+	var some = "Hello Function~~!!"
+}
+info2();
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

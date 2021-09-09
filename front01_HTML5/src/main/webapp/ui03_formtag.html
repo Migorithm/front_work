@@ -1,0 +1,110 @@
+<!-- ui화면에 값 입력 :: form 
+attribute#1 :: action   :: server page(like flask)
+attribute#2 :: method   :: get(default) , post
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 스타일을 먹일 것. 어디에? filedset에! -->
+<style type="text/css">  
+	#firstDiv{   
+		margin-left: 20%;
+		margin-right: 20%;} 
+		
+	#secondDiv{
+		width:40%;
+		margin:0 auto;
+		padding-top: 50px;
+		}
+</style>
+<!-- 
+id를 기반하여 스타일을 달리 먹일 것이다.
+margin :: 브라우저 frame을 기준하여 얼마나 많은 마진을 만들 것인가, 
+margin: 0 auto :: 정중앙 배치.
+padding-top  :: 위에 완충구간을 둔다. 
+ -->
+
+
+<script type="text/javascript">
+	function push(){
+		alert("버튼 클릭 했구나...")
+	}
+
+</script>
+
+</head>
+
+
+<body>
+
+<!-- 모든 입력양식을 한번에 묶는 form tag -->
+	<div id="firstDiv">
+	<form action="MFS"> <!-- #은 아무것에도 연결 안하겠다는 의미 -->
+		<fieldset>
+			<legend><strong>Movie Schedule</strong></legend>
+			<label><strong>영화제목</strong></label>
+			<input type="text" name="mvtitle">
+			<br/><br/>
+			
+			<label><strong>스케쥴 선택</strong>></label>
+			<input type="date" name="time">
+			<br/><br/>
+			
+			<label><strong>성별</strong></label> &nbsp;
+			<input type="radio" name="gender" value="m">male &nbsp;
+			<input type="radio" name="gender" value="f">female
+			<br/><br/>
+			
+			<label><strong>인원수</strong></label> &nbsp;&nbsp;
+			<input type="number" name="number">
+			<br/><br/>
+			
+		
+			
+			<label> <strong>스낵 고르기</strong></label><br>
+			<input type="checkbox" name="snack" value="squid">오징어<br>
+			<input type="checkbox" name="snack" value="peanut">땅콩<br>
+			<input type="checkbox" name="snack" value="raison">건포도<br>
+			<input type="checkbox" name="snack" value="popcorn">팝콘<br>
+			<input type="checkbox" name="snack" value="coke">콜라<br>
+			
+			
+			<!-- textarea는 input tag로 시작하지 않는다. -->
+			<textarea rows="10" cols="60">
+엔코아 상영관을 찾아주셔서 감사합니다. 
+불편사항이 있으시다면 이곳에 기입해주시기 바랍니다.
+			</textarea>
+			
+			<input type="submit" value="dataSend">
+			
+		</fieldset>
+<!-- form tag안에 입력된 모든 값을 버튼 클릭시 전송. -->
+	</form>
+	</div>
+	
+<div id="secondDiv">
+		<fieldset>
+		<legend>Basic Form Test</legend>
+		<form action="#" method="post">
+		
+		ID <input type="text" name="userName"><br/><br/>
+		PASSWORD <input type="password" name="userPass"><br/><br/>
+		
+		<input type="submit" value="SEND">
+		<!-- action에 해당하는 주소로 폼에 저장되어있는 값을 들고 들어간다. -->
+		
+		<input type="reset" value="CLEAR">
+		
+		<input type="button" value="CLICK" onclick="push()">
+		</form>
+		</fieldset>
+</div>
+	
+	
+	
+</body>
+</html>

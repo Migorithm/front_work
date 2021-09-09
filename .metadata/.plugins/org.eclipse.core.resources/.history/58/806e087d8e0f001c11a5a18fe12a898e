@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+
+		});
+</script>
+
+
+<body>
+<h2>=====OPEN API 공공데이터 가져오기=====</h2>
+<a href="#" id="send">XMl 데이터 서버로 전송 요청하기</a>
+<p></p>
+<table>
+	<thead>
+	<tr>
+		<th>지역</th><th>풍속</th><th>온도</th><th>강수량</th>
+	</tr>
+	</thead>
+	<tbody>
+		<!-- 이 부분에 XML파일 내용 출력 -->
+	</tbody>
+
+</table>
+</body>
+</html>

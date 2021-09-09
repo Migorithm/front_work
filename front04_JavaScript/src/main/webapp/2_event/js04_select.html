@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function selc(){
+		var subway= document.getElementById("line"); /* path */
+		if (subway.value!=null){  /* value */
+			alert(subway.value)	;
+			subway.value=""; /* initialization */
+		}
+	}
+
+</script>
+</head>
+<body>
+
+<!-- select single option -->
+<form name="form" id="form"></form>
+	<select id="line" name="line" onchange="selc()"> <!-- 변경시 이벤트 발생. -->
+		<option value=""> -----호선-----</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="5">6</option>
+		<option value="5">7</option>
+	</select>
+	
+</body>
+</html>

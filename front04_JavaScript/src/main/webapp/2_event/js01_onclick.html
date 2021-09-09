@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event Handling</title>
+
+<script type="text/javascript">
+//선언적 함수 선언 ... 2개의 함수를 선언한다.
+function showData(){
+	/* var frm = document.loginFrm.nick; */ //쉽게 접근했으나 값을 받은 것은 아니다.
+	var nickname = document.loginFrm.nick.value;
+	alert(nickname +" Hello~!!");
+
+	
+	document.loginFrm.nick.value="";  //clear하기 위함.
+	document.loginFrm.hobby.focus(); //포커스 이동하기 위함.
+}
+
+function showHobby(){
+	var hobby = document.getElementById("hobby") //DomTree 
+	//alert(hooby.value+", Hello~~!!");
+	//div영역에 붉은 글씨로 출력하기... getElementById().  innerHTML사용
+	document.getElementById("result").innerHTML = "<h2><font color=red>"+ hobby.value + ", is a good hobby!</font></h2>";
+	
+	hobby.value = "";
+	document.getElementById("address").focus();
+}
+
+function showAddress(){
+	var hobby = document.getElementsByName("address"); //DomTree 
+	
+	document.getElementById("result2").innerHTML = "<h1 style='color:red'>" + hobby[0].value +", is a good place</h1>";
+
+
+}
+
+</script>
+
+</head>
+<body>
+<form name="loginFrm">
+	NickName <input type="text" name="nick">
+	<input type="button" value="닉네임보기" onclick="showData()"><br/><br/>
+	Hobby <input type="text" name="hobby" id="hobby">
+	<input type="button" value="취미보기" onclick="showHobby()"><br/><br/>
+	Address <input type="text" name="address" id="address">
+	<input type="button" value="주소보기" onclick="showAddress()"><br/><br/>
+	
+</form>
+
+<div id="result"></div>
+<div id="result2"></div>
+
+</body>
+</html>

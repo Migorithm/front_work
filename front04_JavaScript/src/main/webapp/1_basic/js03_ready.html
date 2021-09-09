@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery...ready()</title>
+
+<!-- JQuery를 import하기 위한 script -->
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+
+/* 
+JQuery에서는 ready()가 window.onload 를 대체한다. (그리고 여러번 사용도 가능.)
+$는 JQuery를 call하는 operator
+*/	
+	$(document).ready(function() {
+	var list ='';
+	list +='<ul>';
+	list +='<li>Hello</li>';
+	list +='<li>JavaScript!!</li>';
+	list +='</ul>';
+	document.getElementById("wrap").innerHTML = list;
+	});
+	
+	$(document).ready(function() {
+		alert("aaa...");
+	})
+	$(document).ready(function() {
+		alert("bbb...");
+	})
+
+
+
+</script>
+
+</head>
+<body>
+<h2>===========onload============= </h2>
+<div id="wrap">
+
+
+</div>
+
+</body>
+</html>

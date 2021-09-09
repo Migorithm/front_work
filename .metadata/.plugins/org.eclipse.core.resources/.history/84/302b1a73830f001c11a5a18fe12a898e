@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#frm").submit(function(){
+			/* 
+			1. id, password 폼에 공란을 체크.. 공백일때 alert창 띄우고 포커스 맞추고 페이지 안넘어가게.(html required 사용 없이.)
+			2. checkbox 반드시 하나 이상의 값이 체크되도록. 하나도 선택 안했을 시 alert창  띄워서 경고
+			3. checkbox에 하나 이상의 값이 체크되었다면 each()사용해서 alert로 출력하기.
+			4. confirm창 이용해서 "3개의 취미가 선택되었습니다.. 전송하시겠습니까?" --확인클릭시 전송. 취소 클릭시 전송취소. 
+			
+			*/
+			if ($("#id").val() ==""){
+				alert("ID를 입력해주세요")
+				$("#id").focus()
+				return false
+			}
+			if ($("#password").val() ==""){
+				alert("PASSWORD를 입력해주세요")
+				$("#password").focus()
+				return false
+			}
+			var count = 0;
+			var arr = []
+			$(":checkbox").each(function(index,item){
+				if (item.checked){
+					count+=1;
+					arr.push(item.val())
+				}
+		
+			})
+			if (count ==0){
+				alert("하나 이상의 취미를 선택해주세요")
+				return false
+			}
+			else{
+				alert(arr.toString())
+				confirm("하나 이상의 취미가 선택되었습니다. 전송하시겠습니까?")
+				
+			}
+			
+			
+			
+		})
+
+		});
+</script>
+
+
+<body>
+<form action="jq05_result.jsp" id="frm">
+ID <input type="text" id="id" name="id"><p>
+PASSWORD <input type="password" name="password" id="password"><p>
+
+<strong>당신의 취미를 고르세요...</strong><br/>
+<input type="checkbox" name="hobby" value="Reading">독서<br>
+<input type="checkbox" name="hobby" value="Driving">드라이빙<br>
+<input type="checkbox" name="hobby" value="Drinking">음주<br>
+<input type="checkbox" name="hobby" value="Listening">음악감상<br>
+<input type="submit" value="Data Send">
+</form>
+
+</body>
+</html>

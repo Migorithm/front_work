@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+<script type="text/javascript">
+	function choiceBoy(){
+		var arr = document.frm.boy;
+		
+		var str ="";
+		for (var i=0; i<arr.length; i++){
+			if(arr[i].checked){ //if it has been checked,
+				str += arr[i].value + " ";
+			}
+			arr[i].checked=false; //체크를 풀어준다.
+		}
+		if(str==""){
+			alert("한명 이상을 선택해주세요.")
+		}
+		else{alert("당신의 이상형은.. ["+str+"]입니다");
+		}
+	}
+
+</script>
+
+</head>
+<body>
+<form name="frm">
+	<strong>이상형을 고르세요...(중복선택 가능)</strong><br/><br/>
+	
+	<input type="checkbox" name="boy" value="김우빈">김우빈<br/>
+	<input type="checkbox" name="boy" value="조승우">조승우<br/>
+	<input type="checkbox" name="boy" value="서강준">서강준<br/>
+	<input type="checkbox" name="boy" value="이병헌">이병헌<br/>
+	<input type="checkbox" name="boy" value="원빈">원빈<br/>
+	<input type="button" value="choice" onclick="choiceBoy()">
+</form>
+
+</body>
+</html>

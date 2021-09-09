@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+
+		});
+</script>
+
+
+<body>
+	<select onclick=alert("hey!")>
+		<option>김나영</option>
+		<option>신정훈</option>
+		<option>이승민</option>
+		<option>이원석</option>
+	</select>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#eachBtn").on("click",function(){
+			//배열 선언과 생성	
+			var arr = [];
+			arr.push("아이유");
+			arr.push("이무진");
+			arr.push("박나래");
+			arr.push("기안84");
+			
+			
+			//1. tradional한 방법 for문 사용.
+/* 			var str ="";
+			for (var i=0; i<arr.length; i++){
+				str += arr[i]+" ";
+			}
+			alert(str) */
+			
+			//2. each()함수 사용:: 1)동일한 태그가 여러개 있을때 사용. each() 태그의 갯수만큼 호출... 
+			//                   2)배열에서 사용, each()가 배열의 길이만큼 호출
+			$(arr).each(function(index){
+				alert(index);
+			})
+		
+		});
+	});
+</script>
+
+
+<body>
+	<input type="button" value="배열에 each() 적용하기" id="eachBtn">
+
+</body>
+</html>

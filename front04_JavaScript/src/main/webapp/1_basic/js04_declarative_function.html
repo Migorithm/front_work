@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 함수 선언</title>
+<!-- 
+자바스크립트 함수 선언 방법 2가지
+
+1)익명함수 선언법
+
+
+2)선언적 함수 선언법
+
+ -->
+ 
+<script type="text/javascript">
+var name = "James"; //전역변수.. 함수 선언 바깥에 있다.
+
+//#1
+function showInfo(){
+	var name = "Peter"; //지역변수... 함수 정의 내부에 있다.
+	console.log(name); //Peter
+}
+console.log(name); //James
+
+showInfo();
+
+function showAge(){
+	age = 90; //var를 안쓰면 해당 함수 호출시 전역변수로 지정된다.
+	let go = 55; //지역변수를 지정하기 위한 convention(since 2015)
+}
+showAge();
+console.log(age);
+/* console.log(go); uncallable */ 
+
+
+
+info();
+/*#2 함수 호출을 위에서 해보자. 될까? 된다! 선언적 함수의 onload특성. 
+	- 미리 메모리에 올라가고
+	- 웹 브라우저는 script태그 안 내용을 한줄씩 실행한다.
+	- 이때 info()를 호출해도 실행상 에러가 나지 않는 것은	
+*/		
+
+function info(){
+	alert("func info() A....");
+	
+}
+
+function info(){
+	alert("func info() B....");
+	alert("undefined..."  + greet );
+	
+	var greet="Hello Hosting~!!";
+}
+
+
+</script> 
+
+
+</head>
+<body>
+
+
+</body>
+</html>

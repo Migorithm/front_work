@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+body{font-family: sans-serif;
+	background-color:white;}
+
+header{box-sizing: content-box;
+		text-align: center;
+		background-color:#e6e3e3;
+		padding:30px;}
+
+nav{overflow:hidden;
+	background-color: #383636;
+	padding-top: 15px;
+	margin:0;
+	padding-bottom: 15px;}
+nav>a{box-sizing: content-box;
+	  padding:10px;
+	  margin-right: 20px;
+	  color:white;
+	  text-decoration: none;
+}
+
+section{overflow:hidden}
+.column{float:left;
+		box-sizing: border-box;
+		width: 33%;
+		padding: 20px;
+		padding-bottom: 200px;
+		}
+
+footer {box-sizing:content-box;
+		background-color:#e6e3e3;
+		width:33%;
+		position:absolute;
+		padding-top: 30px;
+		float:left;
+		height:10%;
+		left:33%;
+		text-align: center;
+		overflow:hidden;}
+
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</header>
+
+<nav>
+  <a href="http://127.0.0.1:5000/">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</nav>
+
+<section class="row">
+  <article class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </article>
+  
+  <article class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </article>
+  
+  <article class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </article>
+</section>  
+ 
+  <!-- 추가하기 -->
+<footer >
+  	<p><h2>Footer</h2></p>
+</footer>
+
+</body>
+</html>
+
+

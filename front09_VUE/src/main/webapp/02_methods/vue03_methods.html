@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+<body>
+	<div id="app">
+		<div v-text="title"></div>
+		<div v-html="title"></div>
+		<div>{{title}}</div>
+		<div>{{showInfo()}}</div> <!-- {{안에서 메소드 호출시 ()빼면 안됌!}} -->
+		<div>{{showInfo2('James')}}</div>
+		<button @click="changeName">이름바꾸기</button> <!-- 버튼은 안에 있는 값이 버튼의 표시자가 된다. -->
+	
+	
+	
+	</div>
+</body>
+<script>
+	var app = new Vue({
+		el:"#app",
+		data:{
+			title:'<h2>ENCORE</h2>'
+		},
+		methods:{
+			changeName:function(){
+				this.title = "Encore HRM Encore HRM"
+				
+			},
+			showInfo:function(){
+				return "ENCORE HRM :"+ new Date(); //리턴값을 어떻게 뿌릴 것인가? 
+				
+			},
+			showInfo2:function(name,$event){//인자값으로 event객체를 연결하려면 반드시 명시. //overloading도 안됌.
+				return name + ", " + new Date() 
+			}
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onload() 함수와 복합연산자</title>
+<script>
+
+	
+	var list ='';//지금은 값이 없지만 ... 이후 동적으로 데이터가 할당
+	list +='<ul>';
+	list +='<li>Hello</li>';
+	list +='<li>JavaScript!!</li>';
+	list +='</ul>';
+	//list변수 안에 축적된 모든 내용을 div안에 뿌려준다. 선택자 -> #wrap 
+	//DOM tree에 접근. 
+	
+	
+	document.getElementById("wrap").innerHTML = list;
+	//이 상태에서는 할 수 없다. 바디가 먼저 구조화되지 않았기 때문. 
+
+</script>
+
+</head>
+<body>
+<h2>===========onload============= </h2>
+<div id="wrap">
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.image{position:absolute;
+			top:30px;left:30px;}
+
+</style>
+</head>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+
+		});
+</script>
+
+
+<body>
+
+<a class="image" href="http://jquery.com">
+	<img alt="" src="../image/1.jpg" height="370" width="300">
+</a>
+<a class="image">
+	<img alt="" src="../image/2.jpg" height="370" width="300">
+</a>
+<a class="image">
+	<img alt="" src="../image/3.jpg" height="370" width="300">
+</a>
+<a class="image">
+	<img alt="" src="../image/4.jpg" height="370" width="300">
+</a>
+<a class="image">
+	<img alt="" src="../image/5.jpg" height="370" width="300">
+</a>
+
+
+</body>
+</html>

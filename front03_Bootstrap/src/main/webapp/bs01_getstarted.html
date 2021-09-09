@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- device별 사이즈 설정 -->
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  
+  <!-- bootstrap library를 포함하기 전에 jquery라이브러리를 먼저 포함시켜주어야 한다. 
+  	
+  	이유?
+  		- bootstrap은 html, css, jquery기반으로 작성된 framework이기 때문이다.
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ </style>
+</head>
+<body>
+
+
+
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+  
+  <!-- 
+  Bootstrap ... GridSystem
+  한줄은 기본적으로 12칸으로 구성되어있다. 
+  정확하게 3등분 layout을 구현하려면 하려면 col-sm-4를 div에 3번 넣어준다. 
+  
+  디바이스 크기 
+  xs(모바일) ---- width 768px
+  sm(태블릿) ---- width 768px < sm
+  md(노트북) ---- 992px
+  lg(데스크탑)--- 1200px
+  -->
+  
+  
+  <!-- grid는 width를 up to 12까지의 독립된 격자로 나눈다. 따라서 4씩 주면 3등분된다. -->
+    <div class="col-lg-3" style="background-color: lavender">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-lg-3" style="background-color: lavenderblush">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-lg-3" style="background-color: lavender">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-lg-3" style="background-color: lavenderblush">
+      <h3>Column 4</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

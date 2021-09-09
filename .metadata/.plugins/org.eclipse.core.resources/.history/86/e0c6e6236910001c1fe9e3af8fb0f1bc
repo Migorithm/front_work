@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>v-bind :: 속성에 해당하는 값들을 모델로 연결하는 기법.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$(function(){
+	var model={
+			message1:"콧수염 방법으로 출력하기",
+			message2:"<h2> 기본 디렉티브 방법으로 출력하기</h2>",
+			message3:"<h2> 기본 디렉티브 방법으로 출력하기</h2>",
+			
+			prop1:"center",
+			prop2:"http://sample.bmaster.kro.kr/photos/61.jpg",
+	
+			title:"Hello V-Model!!!"
+	}
+	
+	new Vue({
+		el:"#app",
+		data:model
+	}
+	
+	)
+});
+
+
+</script>
+
+</head>
+
+
+
+<body>
+	<div id="app">
+		<h1>{{title}}</h1>
+		Greeting message : <input type="text" name="greet" v-model="title">
+		
+		
+		<h2>{{message1}}</h2>
+		<h2 v-text="message2"></h2>
+		<h2 v-html="message3"></h2>
+		<h2 :align="prop1">안녕하세요(이부분을 가운데 정렬하고 싶어요.)</h2>
+		<img alt="" :src="prop2" >	
+	</div>
+</body>
+</html>

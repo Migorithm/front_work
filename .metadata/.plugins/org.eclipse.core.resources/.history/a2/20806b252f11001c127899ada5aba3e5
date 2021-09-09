@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>v-if, v-for, v-model 사용하기</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+
+
+
+<body>
+<div id="app">
+	<label>Encore 지부별 개설된 class 수</label>
+	<input type="number" name="number" v-model="count">
+	<ul v-for="(encore,index) in encores" v-if="encore.count==app.count">
+		<li>{{encore["name"]}}, {{encore["count"]}}의 클래스로 운영</li>
+	</ul>
+</div>
+</body>
+<script>
+	var app = new Vue({
+		el:"#app",
+		data:{
+			count:0,   /* form을 보고 초기값 판단. 이경우 type="number" 이기에, 초기값 0*/
+			encores:[
+				{name:"서초지부",count:6},
+				{name:"남부지부",count:7},
+				{name:"영등포지부",count:3},
+				{name:"여의도지부",count:3}
+			]
+		}
+	})
+
+</script>
+</html>

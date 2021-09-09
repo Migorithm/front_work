@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+
+		});
+</script>
+
+
+<body>
+	<table>
+		<tr>
+			<td align="center" width="150" height="200"></td>
+				<a href="../image/2.jpg"> 
+				<img alt="" src="../image/2.jpg">
+				</a>
+				<p>이무진</p>
+			<td width="350" align="center">
+				<a href="../image/2.jpg"> 
+				<img alt="" src="../image/2.jpg">
+				</a>
+			</td>
+		</tr>
+	
+	</table>
+
+
+</body>
+</html>

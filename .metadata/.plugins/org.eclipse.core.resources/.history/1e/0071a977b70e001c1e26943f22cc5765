@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hover() :: mouseenter,mouseleave 이벤트 포커스 2개를 이미 가지고 있는 함수... 이미지에서 hover효과 내기</title>
+
+<style type="text/css">
+	.larger{width:200px;border:2px solid red;}
+
+	img{width:100px;}
+	
+</style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("img").hover(
+			//find():: hover이벤트가 적용된 img태그 중에 class값으로 h를 발견하면 addClass를 적용하겠다.
+				
+				function(){
+					$(this).addClass("larger")
+					},
+
+				function(){
+					$(this).removeClass("larger")
+						
+					})
+
+		});
+</script>
+
+
+<body>
+	<h2>Bigger Image ...</h2>
+	<div>
+	<img alt="" src="../image/1.jpg" ><br/>
+	<img alt="" src="../image/2.jpg" ><br/>
+	<img alt="" src="../image/3.jpg" ><br/>
+	</div>
+
+</body>
+</html>

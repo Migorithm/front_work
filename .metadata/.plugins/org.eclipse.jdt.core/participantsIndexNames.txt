@@ -1,0 +1,15 @@
+INDEX VERSION 1.131
+C:\encore_migo\eclipse\FrontWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1091786318.index
+\front06_JQuery_Ajax\src\main\java
+C:\encore_migo\eclipse\FrontWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2015783480.index
+\front08_JQueryUI\src\main\java
+C:\encore_migo\eclipse\FrontWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2933024937.index
+\front05_JQuery\src\main\java
+C:\encore_migo\eclipse\FrontWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4178873664.index
+\assignment2\src\main\java
+C:\encore_migo\eclipse\FrontWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\931743393.index
+\front05_JQuery\src\main\java
+C:\encore_migo\eclipse\FrontWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\906380479.index
+\front05_JQuery\src\main\java
+C:\encore_migo\eclipse\FrontWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\186731120.index
+\front08_JQueryUI\src\main\java

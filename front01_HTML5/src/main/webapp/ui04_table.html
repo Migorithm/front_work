@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 
+css 선택자 지정방법
+열거형 ::: 모든 선택자를 다 선택하는 방법. ","를 구분자로 사용
+자식 ::: 1. >를 사용해서 직계자식을 구분한다.
+		2. [ ](공백)을 사용해서 구분한다.
+
+ -->
+
+<style type="text/css">
+	table{
+		border: 1px solid black ;
+		border-collapse: collapse;
+		
+		}
+	tr, td{
+		border:1px solid;
+		text-align: center;
+		padding:2px;}
+	thead,tfoot {
+		background-color: #90d4d0;}
+	
+	/*table의 자식 태그인 tbody의 자식태그인 tr를 선택자로 지정 */
+/* 	table>tbody>tr {
+		background-color: #d9faf8;
+		
+	}
+ */
+/* 	table tbody tr {
+	background-color: #c5dedc;} */
+
+	table>tbody>tr:HOVER{
+		background-color: Violet; 
+	}
+	
+/* literally, when you hover around the row, it will be colored.*/
+
+
+</style>
+</head>
+<body>
+<h2 align="center">Table Tag Test...</h2>
+
+<table align="center" width="40%">
+	<thead>
+		<tr>
+			<th>NO</th><th>NAME</th><th>ADDRESS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>11</td><td>James</td><td>TX</td>
+		</tr>
+		<tr>
+			<td>22</td><td>Peter</td><td>NY</td>
+		</tr>
+		<tr>
+			<td>33</td><td>Gosling</td><td>CS</td>
+		</tr>
+		<tr>
+			<td>44</td><td>Ann</td><td>PL</td>
+		</tr>		
+	</tbody>
+	
+	<tfoot>
+		<tr>
+			<td>55</td><td>66</td><td>77</td>
+		</tr>
+	</tfoot>
+</table>
+</body>
+</html>

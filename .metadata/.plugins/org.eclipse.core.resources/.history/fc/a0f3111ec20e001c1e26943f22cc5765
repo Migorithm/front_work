@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.image{position:absolute;
+			top:30px;left:30px;}
+
+</style>
+</head>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+		//1.페이지가로드되자마자 이단 모든 이미지를 숨긴다.
+		$('.image').hide()
+
+		//첫번째 이미지가 보여지도록.. 서서히. 
+		$('.image:eq(0)').show(3000);
+	
+		//보이는 이미지를 클릭할때마다 다음번 이미지가 보여지도록 + 슬라이딩 효과
+		$(".image").click(function(event){
+			//a태그의 기본적인 이미지를 막아야 http://jqeury.com으로 이동하지 않을 것. 
+			//-> preventDefault()
+			event.preventDefault();
+			$(this).next().show(2000);
+			
+		})
+		
+		});
+</script>
+
+
+<body>
+
+<a class="image" href="http://jquery.com">
+	<img alt="" src="../image/1.jpg" height="370" width="300">
+</a>
+<a class="image">
+	<img alt="" src="../image/2.jpg" height="370" width="300">
+</a>
+<a class="image">
+	<img alt="" src="../image/3.jpg" height="370" width="300">
+</a>
+<a class="image">
+	<img alt="" src="../image/4.jpg" height="370" width="300">
+</a>
+<a class="image">
+	<img alt="" src="../image/5.jpg" height="370" width="300">
+</a>
+
+
+</body>
+</html>

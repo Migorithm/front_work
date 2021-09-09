@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"></style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){
+	    //1. Select form에서 선택한 값을 변수 name에 할당 alert하기.(jQuery 이용)
+	    
+/* 		var name = $('select>option').val()
+	    alert(name) */
+		
+	    //2. 일정한 시간 뒤에 코드블럭이 동작하도록 로직을 수정..
+/* 	    setTimeout(function(){
+	    	var name = $('select>option:selected').val()  //선택된것 지정.
+		    alert(name)
+	    },3000);  //3000 millisecond*/
+	    
+	    //3. 5초 뒤에 select폼에서 선택된 학생이 아래 Textfield에 출력되도록해보자. 
+	    setTimeout(function(){
+	    	var name=$('select>option:selected').val()
+	    	$('input').val(name)
+	    },5000)
+	    
+	});
+</script>
+
+
+<body>
+	<select>
+		<option>--선택--</option>
+		<option>김나영</option>
+		<option>신정훈</option>
+		<option>이승민</option>
+		<option>이원석</option>
+	</select>
+	선택한 학생은<input type="text name="resultView" size="16">
+</body>
+</html>

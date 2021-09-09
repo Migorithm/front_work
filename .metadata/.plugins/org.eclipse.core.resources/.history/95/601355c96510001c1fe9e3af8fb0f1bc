@@ -1,0 +1,62 @@
+<!-- 
++++++해보기
+정적인 모델을 지정
+데이터에 이름, 나이, 사는곳에 관한정보를 담을 수 있는 모델을 만든다.
+ 
+app라고 지정한 화면에 모델에 지정한 데이터의 내용이 출력되도록 한다.
+table형식으로
+출력조건
+1) - mustache expression
+2) v-text | v-html
+
+모든 컨텐츠가 메모리에 로딩된 다음 script부분이 가동되도록 한다.
+ 
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+window.onload=function(){
+var model ={name:"이원석",age:"31",address:"somewhere"};
+
+var app = new Vue({
+	el:"#app",
+	data:model
+	
+})
+	
+	
+}
+
+</script>
+
+</head>
+
+<body>
+<div id="app">
+	<table border='1'>
+		<thead>
+		<tr>
+			<td>NAME</td><td>AGE</td><td>ADDRESS</td>
+		</tr>
+		</thead>
+		
+		<tbody>
+		<tr>
+			<td>{{name}}</td><td>{{age}}</td><td>{{address}}</td>
+			<td v-html="name"></td><td v-html="age"></td><td v-html="address"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>

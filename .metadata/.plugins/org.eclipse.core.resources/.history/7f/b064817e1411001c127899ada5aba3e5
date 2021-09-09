@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+<body>
+	<div id="app">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<button></button>
+	
+	
+	
+	</div>
+</body>
+<script>
+	var app = new Vue({
+		el:"#app",
+		data:{
+			title:'<h2>ENCORE</h2>'
+		},
+		methods:{
+			changeName:function(){
+				
+			},
+			showInfo:function(){
+				
+			},
+			showInfo:function(name,event){
+				
+			}
+		}
+	})
+</script>
+</html>

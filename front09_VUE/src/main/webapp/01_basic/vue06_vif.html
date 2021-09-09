@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+<body>
+<div id="app">
+	<!-- 
+	조건부 렌더링
+	::
+	v-if는 조건에 맞지 않으면 렌더링 자체를 안한다. - 주석처리된다. 
+	v-show도 결과적으로는 v-if와 동일한 출력결과를 보인다. - 조건에 맞지 않더라도 렌더링은 하고 css처리기법을 사용한다.(display:none) 
+	
+	v-if는 토글비용이 높고 (state에 따라서 보였다 안보였다 하기가 어렵기 때문에)
+	v-show는 초기 렌더링 비용이 높다. (런타임 조건이 바뀌지 않으면 v-if를 권장한다.)
+	
+	 -->
+	<h1 v-if="show"> 나는 보입니다.
+		<!-- 아래 부분에 엄청 복잡한 연산이 진행된다고 가정해보자... -->
+		<input type="text" name="text1"><br/>
+		<input type="text" name="text2"><br/>
+	</h1>
+	
+	<h1 v-show="show"> 나는 보입니다.
+		<!-- 아래 부분에 엄청 복잡한 연산이 진행된다고 가정해보자... -->
+		<input type="text" name="text1"><br/>
+		<input type="text" name="text2"><br/>
+	</h1>
+</div>
+</body>
+<script>
+	var app = new Vue({
+		el:"#app",
+		data:{
+			show:false
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Encore Theater</title>
+<style type="text/css">
+	body{background:#e6e3e3;}
+	header{	border: 1px;
+		 border-color: blue;}
+		 
+	nav>ul{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		overflow:hidden; /* 컨텐츠가 넘치면 가려준다. */
+		background-color: #333;
+			}
+		
+	nav>ul>li {float: left;}
+	nav>ul>li>a {
+		display:block;
+
+		padding: 14px 60px;
+		text-align: center;
+		color : gray;
+		text-decoration: none;
+	}
+	nav>ul>li>a:hover{
+		color:white;
+	}
+	
+	section{
+			padding-left:10px;
+			position: relative;
+			top: 0;
+			bottom: 0;
+		}
+	.bg {
+		background-color:#cdf086;
+		border-radius: 25px;
+		top:0px;
+		bottom:30px;
+		height:250px;
+		position:relative;
+		
+		}
+	.bg h1, p {
+		padding:20px;
+		color:white;
+		z-index:3;
+	}
+	.logo{
+		position:absolute;
+		border-radius: 25px;
+		right:0px;
+		top:0px;
+		bottom:30px;
+		height:250px;
+		width: 700px;
+		z-index:2;
+	}	
+	
+	#article1{
+		padding:10px;
+		float:left;
+	}
+	#article1 i{
+		width:30%;
+		height:60%;
+		color:gray;}
+	
+	#article1 pre::selection{
+		background: yellow;
+		color: black;
+	}
+
+	
+	#article2{
+		width:30%;
+		height:60%;
+		padding:10px;
+		padding-top:200px;
+		
+		float:left;
+		}
+	#article2 pre::selection{
+		background: yellow;
+		color: black;
+	}	
+		
+	aside{
+		width:30%;
+		height: 60%;
+		float:right;
+		border-radius: 25px;
+		
+		
+		padding:30px;
+		font-family:sans-serif;
+		background: linear-gradient(to bottom, #ded9d9, #e6e3e3);
+		
+		
+	}
+	
+		
+	
+	aside>ul>li{
+		list-style-type:none;
+	}
+	aside>ul>li>a{
+		text-decoration: none;
+		color:black;
+		}
+
+	
+</style>
+</head>
+<body>
+<header><h1>엔코아 극장</h1></header>
+<nav>
+	<ul>
+	<li><a href="#">영화</a></li>
+	<li><a href="#">극장</a></li>
+	<li><a href="#">예매</a></li>
+	<li><a href="#">이벤트</a></li>
+	<li><a href="#"><img alt="rss" src="img/rss.png" width="14px" height="14px">상영영화소개.RSS</a></li>
+	</ul>
+</nav>
+<section id="home">
+	<div class="background">
+		<div class='bg'>
+	<h1> 무공해 힐링 시네마</h1>
+	<pre>
+	<p>
+무공해 힐링 시네마는 새로운 개념의 영화장르의 한 가지를 
+말하는 것입니다. 지친 영혼을 위한 휴식을 주는 영화나, 마
+음을 정화시키고 치유하는 힘을 가진 영화들....
+	</p>
+	</pre>
+	</div>
+		<img alt="" src="img/kg.jpg" class="logo">
+	</div>
+</section>
+
+
+<div>
+<article id="article1">
+<h1>쿵 푸 팬 더</h1>
+<i><strong>개봉</strong> 2011.5.26</i> <br/><br/>
+<i><strong>감독</strong> 여인영</i><br/><br/>
+<i><strong>등급</strong> [국내] 전체 관람가</i><br/><br/>
+
+<pre>
+하.면.된.다 - 포.스.작.렬
+'평화의 계곡'에서 아버지의 국수 가게를 돕고 있는 팬
+더, 포. 아버지는 국수의 빕버을 알려주어 가업을 잇게
+하고 싶지만, 포의 관심사는 오로지 '쿵푸 마스터' 가게
+일은 뒷전으로 하고 쿵푸의 비법이 적힌 용문서의 전수
+자를 정하는 '무적의 5인방' 대결을 보러 시잡장을 찾은
+포,
+</pre>
+<img alt="" src="img/k1.jpg" width="300px" height="200px">
+</article>
+<article id="article2">
+<pre>
+에게 떨어지는데.. 포는 쿵푸마스터로 거듭날 수 있을
+까? 아니.. 포가 쿵푸를 할 수는 있을까? 똥배 안에 숨겨
+진 포스를 깨우기 위한 포의 도전이 시작된다!
+</pre>
+<video src="media/KungFuPanda_Sample.mp4" controls="controls" width="300px" height="200px"></video>
+</article>
+
+<aside>
+
+<h4>Movies</h4>
+<ul id="asides">
+<li><a href="#">현재상영작</a></li>
+<li><a href="#">상영예정작</a></li>
+<li><a href="#">영화뉴스</a></li>
+<li><a href="#">테마뉴스</a></li>
+<li><a href="#">맥스무비 예매순위</a></li>
+</ul>
+</aside>
+</div>
+
+
+
+</body>
+</html>

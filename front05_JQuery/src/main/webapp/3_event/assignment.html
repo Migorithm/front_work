@@ -1,0 +1,119 @@
+<!-- 
+1. 계산 이력 남기기(번호로)
+2. 클릭시 boundary 하이라이트.
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+		#calc{
+			border:1px solid gray;
+			width:350px;
+			text-align: center;
+		}
+		#formula{
+			text-align: right;
+			width:80%;
+			margin-top:10px;
+			margin-bottom:20px;
+		}
+		#resultDiv{
+			text-align: left;
+			margin-left:40px;
+		}
+		button{
+			width:70px;
+			height:70px;
+			margin:5px;
+			border-radius: 5px;
+			
+			
+		}
+
+		button:hover, .highlighter:focus{
+			
+			border :2px solid #95c9ed;
+		
+
+			
+		}
+			
+</style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	const num = ["1","2","3","4","5","6","7","8","9","0"]
+	const operator = ["+","-","*","/"]
+	
+	$(function(){
+		$('button').bind("click",function(){
+		$(this).addClass('highlighter'); 
+			if (num.includes($(this).html())){
+				var added_num =  $('input[type=text]').val() +$(this).html() 
+				$('input[type=text]').val(added_num)
+			}
+			
+			else if (operator.includes($(this).html())){
+		
+			var added_num =  $('input[type=text]').val() +$(this).html() 
+
+			$('input[type=text]').val(added_num)
+			}
+		
+		
+			else if ($(this).html() == "CE"){
+				$('input[type=text]').val("")
+			}
+			else {
+				var last =$('input[type=text]').val();
+				if (operator.includes(last.charAt(last.length-1)) || 
+					operator.includes(last.charAt(0))){
+					alert("연산할 수 없는 식입니다.")
+				}
+				else{
+				var result = eval($('input[type=text]').val())
+				$('#result').append("<li>"+$('input[type=text]').val() +"="+result+"</li>")
+				$('input[type=text]').val(result)
+			}}
+		
+			
+		})
+		
+		
+		});
+</script>
+
+
+<body>
+	<div id="calc">
+		<input type="text" id="formula" value="" placeholder="0.0" readonly/> 
+		<div id="pad">
+			<button >7</button>
+			<button >8</button>
+			<button >9</button>
+			<button >+</button>
+			<button >4</button>
+			<button >5</button>
+			<button >6</button>
+			<button >-</button>
+			<button >1</button>
+			<button >2</button>
+			<button >3</button>
+			<button >*</button>
+			<button >0</button>
+			<button >CE</button>
+			<button >=</button>
+			<button >/</button>
+		</div>
+		<div id="resultDiv">
+			<h2>결 과 이 력</h2>
+			<ol id="result"></ol>
+		</div>
+	</div>
+</body>
+</html>
