@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+
+
+
+<body>
+<div id="flag_section">
+	<h2>National Flags</h2>
+	<table id="tid" border="1px">
+		<thead>
+			<tr>
+				<th>나라이름1</th><th>나라이름2</th><th>국기</th>
+			</tr>
+		</thead>
+		<tbody v-for="flag in flags">
+			<tr>
+				<td>{{flag.name}}</td><td>{{flag.korname}}</td><td><img alt="" src={{flag.flag}}></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+<script>
+	var model={
+			flags:[
+				{
+					name:"Ghana",
+					korname:"가나",
+					flag:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/44px-Flag_of_Ghana.svg.png',
+				},
+				{
+					name:"South_Korea",
+					korname:"대한민국",
+					flag:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/44px-Flag_of_South_Korea.svg.png'
+				}
+			]
+	
+	}
+	
+	var app = new Vue({
+		el:"#flag_section",
+		data:model
+	})
+
+</script>
+
+</html>

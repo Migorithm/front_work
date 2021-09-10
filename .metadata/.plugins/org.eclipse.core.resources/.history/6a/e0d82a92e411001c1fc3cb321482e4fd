@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+
+
+
+<body>
+	<div id="app">
+		<h2 v-clock>{{title}}</h2>
+	</div>
+</body>
+
+<script>
+	setTimeout(()=>{  
+		new Vue({
+			el:"#app",
+			data:{title:"안녕하세요."}
+			
+		})		
+	},2000)
+
+//비동기 구현은 Vue객체 안에서 진행. 만약 데이터베이스에서 컨트롤러가 값을 가져오는데 시간이 너무 걸린다면..
+//화면에 랜더링 되어야할 값이 부재하는 일 발생. 
+
+//v-cloak 디렉티브를 통해 자바스크립트의 로딩이 끝나기 전까지 (랜더링하기 전까지) 
+//화면에 남아있는 Vue문법이 노출되지 않도록 가려주는 역할을 한다. 
+//즉 특정 부분을 display:none으로 설정하는데 v-cloak 디렉티브 문법을 적용한다. 
+
+</script>
+</html>

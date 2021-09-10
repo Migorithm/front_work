@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>v-if | v-else-if | v-else </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+
+<body>
+<div id="app">
+	<div v-html="title"></div>
+	<input type="text" v-model="grade">
+	<template v-if="grade=='A'">
+		<div>grade</div>
+		<div>값이</div>
+		<div>A인 경우입니다.</div>
+	</template>
+	<template v-else>
+		<div>grade</div>
+		<div>값이</div>
+		<div>A이 아닌 경우입니다.</div>
+	</template>
+</div>
+
+</body>
+<script>
+	var app =new Vue({
+		el:"#app",
+		data:{
+			title:"ENCORE",
+			grade:"A"	
+		}
+	
+	})
+
+</script>
+
+</html>

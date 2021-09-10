@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css">
+	#second>h2{width:800px;height:30px;margin:0 auto; padding:20px;}
+	#checkboxArea1 {width:800;height:30px;margin:0 auto; padding:20px; text-align: center; font-size: 13px}
+	#checkboxArea1 {width:800;height:30px;margin:0 auto; padding:20px; text-align: center;  font-size: 13px; color:red;}
+	
+</style>
+
+</head>
+<body>
+	<div id="second">
+		<h2>ENCORE SAFE FOOD</h2>
+	</div>
+	<div id="app">
+		<fieldset id="checkboxArea1">
+			<legend>알레르기 체크</legend>
+			<input type="checkbox" name="box" value="대두" v-model="alergen"><label>대두</label>
+			<input type="checkbox" name="box" value="땅콩" v-model="alergen"><label>땅콩</label>
+			<input type="checkbox" name="box" value="우유" v-model="alergen"><label>우유</label>
+			<input type="checkbox" name="box" value="게" v-model="alergen"><label>게</label>
+			<input type="checkbox" name="box" value="새우" v-model="alergen"><label>새우</label>
+			<input type="checkbox" name="box" value="참치" v-model="alergen"><label>참치</label>
+			<input type="checkbox" name="box" value="연어" v-model="alergen"><label>연어</label>			
+			<input type="checkbox" name="box" value="쑥" v-model="alergen"><label>쑥</label>
+			<input type="checkbox" name="box" value="쇠고기" v-model="alergen"><label>쇠고기</label>
+			<input type="checkbox" name="box" value="닭고기" v-model="alergen"><label>닭고기</label>
+			<input type="checkbox" name="box" value="돼지고기" v-model="alergen"><label>돼지고기</label>
+			<input type="checkbox" name="box" value="복숭아" v-model="alergen"><label>복숭아</label>
+			<input type="checkbox" name="box" value="민들레" v-model="alergen"><label>민들레</label>
+			<input type="checkbox" name="box" value="달걀흰자" v-model="alergen"><label>달걀흰자</label>
+		</fieldset>		
+		<fieldset id="checkboxArea2"> <!-- 위에서 체크된 부분이 아래에 출력되도록 할 것. -->
+		
+		</fieldset>
+	</div>
+	<script>
+		var app = new Vue({
+			
+		})
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
