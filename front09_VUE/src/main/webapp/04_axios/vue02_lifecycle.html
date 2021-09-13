@@ -1,0 +1,89 @@
+<!-- 
+vue인스턴스가 생성될 때
+내부적으로 중요한 몇 단계를 거친다... 이를
+life cycle method(Call back method)로 확인 가능하다. 
+
+1. Vue인스턴스 생성된 직후 :: "created가 hook(call) 된다"라고 표현. 
+						이때 el,data,methods,filters,computed와 같은 옵션들이 활성화된다. 
+
+2. HTML DOM에 Vue el에서 지정한 화면 영역(Vue인스턴스 객체의 관찰대상영역)에 data가 바인딩되는 과정
+					:: mounted가 hook된다.
+					:: 모델에서 받아온 데이터를 el영역에 렌더링할 때 이 라이프사이클에서 작업을 한다. 
+					:: 비동기 작업은 여기서.
+					
+3. 값이 변경될 때마다 렌더링이 반복됨 :: beforeUpdated, updated가 번갈아가면서 반복적으로 hook된다.
+ 
+4. Vue인스턴스가 메모리에서 사라질 때 :: destroyed가 hook된다.  
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css"></style>
+</head>
+
+
+
+<body>
+<div id="app">
+	<span>클릭 마운트:: {{count}}</span>
+	<button @click="count++">카운트 증가</button> <!-- 메소드 연결해도되지만 바로 javascript 표현 -->
+</div>
+<script>
+new Vue({
+	el:"#app",
+	data:{count:0},
+	beforeCreate:function(){
+		console.log("Before Create...."+ this.count);
+	},
+	created:function(){
+		//this.count = 12
+		console.log("Created...."+ this.count);
+	},
+	beforeMount:function(){
+		console.log("Before Mount...."+ this.count);
+		console.log("BeforeMount... 연결된 DOM 엘리먼트 " + this.$el)
+	},
+	mounted:function(){
+		console.log("mounted...."+ this.count);
+		console.log("mounted... 연결된 DOM 엘리먼트 " + this.$el)
+	},
+	beforeUpdate:function(){
+		console.log("beforeUpdated...."+ this.count);
+		
+	},
+	updated:function(){
+		console.log("updated...."+ this.count);
+		
+	}
+	
+	
+	
+})
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

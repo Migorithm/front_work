@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue 비동기 기술 :: AXIOS </title> <!-- 라이브러리 필요 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+<style type="text/css">
+	body{ background-color: #ffffff;}
+	#second>h2{ margin: 0 auto; text-align: center; border: 1px blue; border-collapse: collapse;}
+	#tid{ border: 1px solid blue; margin: 0 auto; text-align: center; border-collapse: collapse;}
+	td{ border: 1px solid green;}
+
+</style>
+</head>
+
+<body>
+<div id="second">
+	<h2>ENCORE SAFE FOOD</h2>
+</div>
+
+<div id="app">
+	<section v-if="errored">
+		<!-- axios 결과 에러가 발생한다면 이 부분이 보여질 것. -->
+		<p>Error In Axios Transport....</p>
+	</section>
+	
+	
+	<section v-else>
+		<div v-if="loading">Loading...</div>
+		<div v-else>
+	<table id ="tid">
+		<thead>
+			<tr>
+				<th>분류</th><th>이름</th><th>이미지</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr  v-for="food in info" style="border:1px solid green">
+				<td>{{food.productGb}}</td><td>{{food.prdlstNm}}</td><td><img :src="food.imgurl1"></td>
+			</tr>
+		</tbody>
+	</table>
+	 </div>
+	</section>
+</div>
+<script>
+	new Vue({
+		el:'#app', /* 관찰대상 영역 설정 */
+					//data:{} 정적인 데이터 바인딩은 colon으로 연결했다. 동적 바인딩은?
+					//data(){} 동적 데이터 바인딩은 이렇게 한다.
+		data(){ 	//서버에서 비동기적으로 받은 것을 리턴해주어야.
+			return {
+				info:null,
+				errored:false,
+				loading:true  //현재 로딩이 되고 있다는 의미로 true
+			
+			}
+		},
+		
+		mounted(){ //axios 기술 비동기가 실현되는 구간은 mounted()
+			axios
+				.get("./food.json")
+				.then(response=>(this.info=response.data)) //응답된 data를 info에 넣기.
+				.catch(error=>{
+					console.log(error) //에러가 나면 콘솔에 찍기
+					this.errored=true;
+				})
+				.finally(()=>this.loading=false)
+			
+		}
+		
+	})
+	
+</script>
+</body>
+</html>

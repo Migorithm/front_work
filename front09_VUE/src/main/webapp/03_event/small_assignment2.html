@@ -12,8 +12,12 @@
 </head>
 <body>    
 	<div id="example">
+		<div v-pre>{{countryname}}</div> 
+		<!-- vue문법에 영향을 받지 않는다. perhaps, preclude. 
+			해당 태그와 그 자식 태그들 모두가 vue문법으로부터 free. -->
 		<p>
-			국가명 : <input type="text" placeholder="국가명을 입력.." v-model="countryname">
+			국가명 : <input type="text" placeholder="국가명을 입력.." v-model="countryname" 
+			v-on:input="countryname=$event.target.value"> <!-- 이벤트가 발생하는 지점의 밸류를 countryname에 넣어준다. -->
 		</p>
 		<table id="tlist">
 			<thead>

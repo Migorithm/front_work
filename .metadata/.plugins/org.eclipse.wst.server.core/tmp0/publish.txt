@@ -1,6 +1,7 @@
 #Tomcat publish data
-#Fri Sep 10 12:17:55 KST 2021
+#Mon Sep 13 11:33:04 KST 2021
 org.eclipse.jst.jee.server\:front09_VUE=C\:\\encore_migo\\apache-tomcat-9.0.45\\webapps\\front09_VUE
 org.eclipse.jst.jee.server\:front08_JQueryUI=C\:\\encore_migo\\apache-tomcat-9.0.45\\webapps\\front08_JQueryUI
 org.eclipse.jst.jee.server\:front06_JQuery_Ajax=C\:\\encore_migo\\apache-tomcat-9.0.45\\webapps\\front06_JQuery_Ajax
+org.eclipse.jst.jee.server\:Workshop=C\:\\encore_migo\\apache-tomcat-9.0.45\\webapps\\Workshop
 org.eclipse.jst.jee.server\:front07_JJimList=C\:\\encore_migo\\apache-tomcat-9.0.45\\webapps\\front07_JJimList
